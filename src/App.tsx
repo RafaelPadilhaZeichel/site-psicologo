@@ -8,7 +8,6 @@ function App() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
   const closeMenu = () => setIsMenuOpen(false)
 
-  // Efeito para ativar a animação "fade-in" quando os elementos aparecem no ecrã
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -16,7 +15,7 @@ function App() {
           entry.target.classList.add('reveal-visible')
         }
       })
-    }, { threshold: 0.15 }) // Dispara quando 15% do elemento está visível
+    }, { threshold: 0.15 })
 
     const hiddenElements = document.querySelectorAll('.reveal')
     hiddenElements.forEach((el) => observer.observe(el))
@@ -39,12 +38,13 @@ function App() {
             <a href="#sobre" onClick={closeMenu}>Sobre Mim</a>
             <a href="#servicos" onClick={closeMenu}>Atendimentos</a>
             <a href="#faq" onClick={closeMenu}>Dúvidas</a>
-            <a href="#contactos" onClick={closeMenu}>Contatos</a>
+            <a href="#contactos" onClick={closeMenu}>Contactos</a>
           </nav>
         </div>
       </header>
 
       <main className="container main-content">
+        {/* Nova Secção Hero (Ampla e com Gradiente) */}
         <section id="inicio" className="hero reveal">
           <div className="hero-content">
             <h1>Como posso ajudar na sua melhoria?</h1>
@@ -70,7 +70,7 @@ function App() {
             </div>
             <div className="sobre-imagem-container">
               <div className="foto-placeholder">
-                <span>Foto Profissional<br/>(Adicionar depois)</span>
+                <span>Espaço para a<br/>Foto Profissional<br/><small>(Tamanho ideal: 800x1000px)</small></span>
               </div>
             </div>
           </div>
@@ -133,7 +133,7 @@ function App() {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119743.53235659223!2d-40.370505118742714!3d-20.35467362035313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81639d1b0d2d3%3A0xc3f8c8d8b9e6e0a8!2sVila%20Velha%2C%20ES!5e0!3m2!1spt-BR!2sbr!4v1690000000000!5m2!1spt-BR!2sbr" 
               width="100%" 
               height="300" 
-              style={{border: 0, borderRadius: '8px', marginTop: '1rem'}} 
+              style={{border: 0, borderRadius: '8px', marginTop: '1.5rem'}} 
               allowFullScreen={false} 
               loading="lazy">
             </iframe>
@@ -150,10 +150,10 @@ function App() {
           </div>
           <p>&copy; {new Date().getFullYear()} Joubert Gomes de Souza. Todos os direitos reservados.</p>
           <p>Psicólogo Clínico | CRP 16/11386 - ES</p>
+          <p>Design e Desenvolvimento por Rafael Padilha</p>
         </div>
       </footer>
 
-      {/* Botão Flutuante do WhatsApp */}
       <a 
         href="https://wa.me/5527996522157" 
         className="whatsapp-float"
