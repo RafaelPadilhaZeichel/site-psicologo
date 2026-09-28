@@ -3,8 +3,8 @@
 
 /* Configurações Globais */
 :root {
-  --primary-color: #0b5c5d; 
-  --secondary-color: #e0f2f1; 
+  --primary-color: #0b5c5d;
+  --secondary-color: #e0f2f1;
   --text-dark: #2d3748;
   --text-light: #718096;
   --bg-color: #f7fafc;
@@ -32,7 +32,7 @@ body {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px; 
+  scroll-padding-top: 100px;
 }
 
 .main-content {
@@ -174,19 +174,15 @@ html {
   margin-bottom: 15px;
 }
 
-.foto-placeholder {
+/* Foto Profissional */
+.foto-profissional {
   width: 100%;
-  aspect-ratio: 4/5;
-  background-color: #edf2f7;
+  aspect-ratio: 5/5;
+  object-fit: cover;
+  object-position: top center;
   border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #a0aec0;
-  font-weight: 500;
-  border: 2px dashed #cbd5e0;
-  padding: 20px;
+  display: block;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
 /* Grid de Serviços */
@@ -281,14 +277,14 @@ html {
   .section-card {
     padding: 30px 20px;
   }
-  
+
   .sobre-grid {
     grid-template-columns: 1fr;
     flex-direction: column-reverse;
     gap: 30px;
   }
-  
-  .foto-placeholder {
+
+  .foto-profissional {
     aspect-ratio: 1/1;
     max-width: 400px;
     margin: 0 auto;
